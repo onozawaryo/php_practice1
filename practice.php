@@ -1,37 +1,61 @@
-
 <?php
-$a = 3;
-$b = 7;
-echo $a + $b;
-echo "\n";
-
-$array_month = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
-echo $array_month[7];
-echo "\n";
-
-$hello = 'Hello,';
-$name = 'RYO';
-$world = 's World!';
-echo $hello.$name.$world;
-echo "\n";
-
-$tech_boost = 'tech';
-$tech_boost .= '　boost';
-echo $tech_boost;
-echo "\n";
-
-$array_2018_calender = [
-    "January" => "1月",
-  "February" => "2月",
-  "March" => "3月",
-  "April" => "4月",
-  "May" => "5月",
-  "June" => "6月",
-  "July" => "7月",
-  "August" => "8月",
-  "September" => "9月",
-  "October" => "10月",
-  "November" => "11月",
-  "December" => "12月"
-];
-echo $array_2018_calender["December"];
+ function sum($A){
+     $result = 0;
+     $result =  $A * 2;
+     return $result;
+ }
+ echo sum(100)."\n";
+ 
+ 
+ function f($a, $b){
+     $result = 0;
+     $result = $a + $b;
+     return $result;
+ }
+ echo f(10, 9)."\n";
+ 
+ function g($arr){
+     $result = 1;
+    foreach($arr as $a){
+        $result *= $a;
+    }return $result;
+ }
+  $arr = array(1, 3, 5, 7, 9);
+  echo g($arr)."\n"; 
+  
+  function max_array($arr){
+      $max_number = $arr[0];
+    
+   foreach($arr as $a){
+       if($max_number < $a){
+           $max_number = $a;
+       }
+   }
+    return $max_number;
+        
+    }
+   $array = [5, 11, 7, 9, 3, 8, 14];
+   echo max_array($array)."\n";
+   
+   $html = '名前<br><p>名前</p><strong>名前</strong>';
+   $html = strip_tags($html);
+   echo $html."\n";
+   
+   $fruits = ['みかん', 'さくらんぼ', 'いちご'];
+   array_push($fruits, 'りんご', 'めろん');
+   print_r($fruits)."\n";
+   
+   $array1 = ['みかん', 'さくらんぼ'];
+   $array2 = ['いちご', 'りんご', 'めろん'];
+   $array = array_merge($array1, $array2);
+   print_r($array)."\n";
+   
+   echo 'now time:' .time()."\n";
+   
+   $timestamp = mktime(22, 20, 0, 12, 1, 2019);
+   echo $timestamp."\n";
+   
+   date_default_timezone_set('Asia/Tokyo');
+   echo date("Y/m/d  H:i:s")."\n";
+   
+  
