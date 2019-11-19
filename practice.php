@@ -58,4 +58,9 @@
    date_default_timezone_set('Asia/Tokyo');
    echo date("Y/m/d  H:i:s")."\n";
    
-  
+  $name = 'RYO';
+  if($name == 'RYO'){
+   echo '私はあなたの名前です'."\n";
+  }else{
+   echo '私はあなたの名前ではありません'."\n";
+  }
